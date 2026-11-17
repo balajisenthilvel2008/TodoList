@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Advanced To-Do List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <header>
+            <h1>My To-Do List</h1>
+            <p>Organize your day, achieve your goals!</p>
+
+            <div class="datetime">
+                <h3 id="currentDate"></h3>
+                <h2 id="currentTime"></h2>
+            </div>
+        </header>
+
+        <div class="task-summary">
+            <div class="box">
+                <h2 id="totalTasks">0</h2>
+                <p>Total Tasks</p>
+            </div>
+
+            <div class="box">
+                <h2 id="pendingTasks">0</h2>
+                <p>Pending</p>
+            </div>
+
+            <div class="box">
+                <h2 id="completedTasks">0</h2>
+                <p>Completed</p>
+            </div>
+        </div>
+
+        <div class="task-form">
+
+            <h2>Add New Task</h2>
+
+            <input type="text" id="taskInput"
+                   placeholder="Enter your task">
+
+            <div class="form-row">
+
+                <input type="date" id="taskDate">
+
+                <input type="time" id="taskTime">
+
+                <select id="priority">
+                    <option value="Low">Low Priority</option>
+                    <option value="Medium">Medium Priority</option>
+                    <option value="High">High Priority</option>
+                </select>
+
+            </div>
+
+            <button onclick="addTask()" id="addButton">
+                Add Task
+            </button>
+
+        </div>
+
+        <div class="filters">
+
+            <button onclick="filterTasks('All')">All</button>
+
+            <button onclick="filterTasks('Pending')">
+                Pending
+            </button>
+
+            <button onclick="filterTasks('Completed')">
+                Completed
+            </button>
+
+        </div>
+
+        <h2 class="list-heading">My Tasks</h2>
+
+        <div id="taskList"></div>
+
+    </div>
+
+    <script src="script.js"></script>
+    <footer>
+    <hr>
+    <p>Developed by: Balaji S</p>
+    <p>Register Number: 212225220015</p>
+    <p>Department of Information Technology</p>
+</footer>
+
+</body>
+</html>
